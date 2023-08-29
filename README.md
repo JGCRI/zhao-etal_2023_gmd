@@ -1,41 +1,147 @@
-[![DOI](https://zenodo.org/badge/265119113.svg)](https://zenodo.org/badge/latestdoi/265119113)
+_your zenodo badge here_
 
-# metarepo
-Template repository for a single point of access meta-repository to reproduce an experiment
+Zhao-etal_2023_GMD
 
-## Purpose
-A meta-repository creates a single point of access for someone to find all of the components that were used to create a published work for the purpose of reproducibility.  This repository should contain references to all minted data and software as well as house any ancillary code used to transform the source data, create figures for your publication, conduct the experiment, and / or execute the contributing software.
+# Representing Reservoir Water Storage in the Global Change Analysis Model (GCAM)
 
-## Using the template
-Simply click `Use this template` on the main repository page (shows up to the left of `Clone or download`) and fill in your `Repository name`, the `Description`, select whether you want the repository to be `Public` or `Private`, and leave `Include all branches` unchecked.
+Mengqi Zhao<sup>1\*</sup>, Thomas B. Wild<sup>2</sup>, Neal T. Graham<sup>2</sup>, Son Kim<sup>2</sup>, Matthew Binsted<sup>2</sup>, AFK Kamal Chowdhury<sup>3</sup>, Siwa Msangi<sup>4</sup>, Pralit Patel<sup>2</sup>, Chris R. Vernon<sup>1</sup>, Hassam Niazi<sup>2</sup>, Hong-Yi Li<sup>5</sup>, Guta Abeshu<sup>5</sup>
 
-## Naming your meta-repository
-The following naming conventions should be used when naming your repository:  
-- Single author:  `lastname_year_journal`
-- Multi author:  `lastname-etal_year_journal`
-- Multiple publications in the same journal:  `lastname-etal_year-letter_journal` (e.g., `human-etal_2020-b_nature`)
+<sup>1 </sup>Pacific Northwest National Laboratory, Richland, 99354, United States <br>
+<sup>2 </sup>Joint Global Change Research Institute, Pacific Northwest National Laboratory, College Park, 20740, United States <br>
+<sup>3 </sup>Earth System Science Interdisciplinary Center, University of Maryland, College Park, 20740, United States <br>
+<sup>4 </sup>Economic Research Service, U.S. Department of Agriculture, Washington DC, 20250, United States <br>
+<sup>5 </sup>Department of Civil and Environmental Engineering, University of Houston, Houston, 77204, United States <br>
 
-## Customize your `.gitignore` file
-A general `.gitignore` for use with Python or R development is included.  However, you may wish to customize this to the needs of your project.  The `.gitignore` file lets Git know what to push to the remote repository and what needs to be ignored and stay local.
 
-## Suggestions
-- Don't bog down your repository with a bunch of raw data.  Instead archive and mint a DOI for your data and provide the reference in this repository with instructions for use.
-- Create complete and tested documentation for how to use what is in this repository to reproduce your experiment.
+\* corresponding author:  Mengqi Zhao (mengqi.zhao@pnnl.gov)
 
-## Creating a minted release for your meta-repository
-It is important to version and release your meta-repository as well due to changes that may occur during the publication review process.  If you do not know how to conduct a release on GitHub when linked with Zenodo, please contact chris.vernon@pnnl.gov to get set up.  
+<!-------------------------->
+<!-------------------------->
+## Contents
+<!-------------------------->
+<!-------------------------->
+- [Abstract](#abstract)
+- [Journal Reference](#journal-reference)
+- [Code Reference](#code-reference)
+- [Data Reference](#data-reference)
+- [Contributing Modeling Software](#contributing-modeling-software)
+- [Reproduce My Experiment](#reproduce-my-experiment)
+- [Reproduce My Figures](#reproduce-my-figures)
 
-## The meta-repository markdown template
-A sample meta-repository template is provided in this repository in the file `metarepo_template.md`.  
+## Abstract
+Water resources shape, and are shaped by, broader interactions with climate, land, energy, and socioeconomic systems. Reservoirs, in particular, play a significant role in modifying the spatiotemporal availability of surface water to meet multi-sector human demands, despite representing a relatively small fraction of the global water budget. Yet the integrated modelling frameworks that explore the interactions among these systems at a global scale often contain limited representations of water storage dynamics (e.g., human impacts on evolving reservoirs).  In this study, we implement a representation of global water storage in the Global Change Analysis Model (GCAM) to enable exploration of the future role (e.g., expansion) of reservoir water storage globally in meeting demands for, and evolving in response to interactions with, the climate, land, and energy systems. GCAM represents 235 global water basins, operates at 5-year time steps, and uses supply curves to capture economic competition among renewable water (e.g., via reservoirs), non-renewable groundwater, and desalination. Our approach consists of developing a Global Reservoir Yield (GLORY) model with a Linear Programming (LP) algorithm that is dynamically linked with GCAM. The new approach improves the representation of reservoir water storage in GCAM in several ways. Firstly, the GLORY model identifies the cost to supply increasing levels of reliable water supply from reservoir storage, considering regional physical and economic dynamics, including evolving monthly reservoir hydrologic inflows and demands, and the levelized cost to construct additional reservoir storage capacity. Secondly, we analyse the potential for reservoir storage capacity expansion by applying constraints related to population, protected land, water sources, and cropland. We also examine how climate and socioeconomic impacts influence the pathways for reservoir expansion. Additionally, the pioneering GLORY – GCAM feedback loop allows evolving water demands from GCAM to inform the LP-based GLORY model, resulting in an updated supply curve at each time step, and enables GCAM to establish a more meaningful economic value of water. This study improved our understanding on the sensitivity of reliable reservoir water supply to multiple physical and economic dimensions, such as sub-annual variations in climate conditions and human water demands, especially for basins experiencing socioeconomic droughts.  This new approach enables a broad suite of previously unexplored questions focused on the future of reservoir storage expansion and its multi-sector, multi-system implications under evolving forces such as climate and socioeconomic change. 
 
-To use it, do the following:
-1. Create the template repository as mentioned above in [Using the template](#using-the-template)
-2. Clone your new repository to you local machine
-3. Change directories into your new meta-repository directory you just cloned
-4. Run `git rm README.md` to delete this file (`README.md`) and commit it using `git commit -m 'remove instructions'`
-5. Rename `metarepo_template.md` as `README.md`
-6. Run `git add README.md` to stage the new file that will show up on load in your remote GitHub repository
-7. Run `git rm metarepo_template.md` to remove the original template
-8. Run `git commit -m 'set up new template as readme'` to set the changes
-9. Run `git push` to send the changes to your remote GitHub repository
-10. Modify the `README.md` file to represent your experiement and use the `add`, `commit`, `push` workflow to update your remote repository
+[Back to Contents](#contents)
+
+## Journal reference
+Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. Representing reservoir water storage in the Global Change Analysis Model (GCAM). Geoscientific Modeling Development, In Progress.
+
+[Back to Contents](#contents)
+
+## Code reference
+
+
+References for each minted software release for all code involved.  
+
+These are generated by Zenodo automatically when conducting a release when Zenodo has been linked to your GitHub repository. The Zenodo references are built by setting the author order in order of contribution to the code using the author's GitHub user name.  This citation can, and likely should, be edited without altering the DOI.
+
+If you have modified a codebase that is outside of a formal release, and the modifications are not planned on being merged back into a version, fork the parent repository and add a `.<shortname>` to the version number of the parent and construct your own name.  For example, `v1.2.5.hydro`.
+
+Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. Repository for Zhao-etal_2023_GMD v1.0.0. Zenodo, In Progress.
+
+[Back to Contents](#contents)
+
+## Data reference
+
+### Input data
+Reference for each minted data source for your input data.  For example:
+
+Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/some-doi-number
+
+<a name="table1"></a>
+**Table 1:** Input data.
+
+| Input | Model or Source | Link or DOI | Description |
+|---|---|---|---|
+| Hydrological Inputs | Xanthos | <https://github.com/JGCRI/xanthos> | Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution |
+| Historical Water Demand | Tethys (based on GCAM Reference) | <https://doi.org/10.5281/zenodo.4321776> | Monthly global water withdrawals for six demand sectors (electricity, irrigation, livestock, mining, industry, and municipal) at 0.5 degree resolution |
+| Reservoirs | GranD v1.3 | <https://www.globaldamwatch.org/grand> | Global Reservoir and Dam dataset |
+| Lakes | HydroLAKES v1.0 | <https://www.hydrosheds.org/products/hydrolakes> | Shoreline polygons of all global lakes with a surface area of at least 10 ha |
+| Population | SEDAC | <https://sedac.ciesin.columbia.edu/data/set/popdynamics-1-8th-pop-base-year-projection-ssp-2000-2100-rev01> | Global one-eighth degree population based on SSP2 |
+| World Database on Protected Areas (WDPA) | Protected Planet | <https://www.protectedplanet.net> | Global protected terrestrial and marine areas |
+| Water Bodies | WWF GLWD-3 | <https://www.worldwildlife.org/pages/global-lakes-and-wetlands-database> | Lakes, reservoirs, rivers and different wetland types in the form of a global raster map at 30-second resolution |
+| Irrigated Crop Land | Demeter (based on GCAM Reference) | <https://doi.org/10.5281/zenodo.4420156> | Global land use land cover change data at 0.5 degree resolution |
+| Slope | EarthEnv | <https://www.earthenv.org/topography> | Global mean slopes at 50km resolution based on DEM products from global GMTED2010 |
+
+
+
+### Output data
+Reference for each minted data source for your output data.  For example:
+
+Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/some-doi-number
+
+
+[Back to Contents](#contents)
+
+
+## Contributing modeling software
+
+<a name="table2"></a>
+**Table 2:** Contributing modeling software.
+
+| Model | Version | Repository Link | DOI |
+|-------|---------|-----------------|-----|
+| GLORY | v1.0.0 | <link to code repository> | link to DOI dataset |
+| GCAM | v5.4 | <https://github.com/JGCRI/gcam-core> | <https://doi.org/10.5281/zenodo.3908600> |
+| gcamwrapper | dev | <https://github.com/JGCRI/gcamwrapper> | <https://github.com/JGCRI/gcamwrapper> |
+| Xanthos | v2.3.1 | <https://github.com/JGCRI/xanthos> | <https://doi.org/10.5281/zenodo.2677687> |
+| Tethys | v1.2.0 | <https://github.com/JGCRI/tethys> | <http://doi.org/10.5281/zenodo.4437750> |
+| Demeter | v1.1.0 | <https://github.com/JGCRI/demeter> | <https://doi.org/10.5281/zenodo.3234948> |
+
+[Back to Contents](#contents)
+
+## Reproduce my experiment
+
+1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software)
+2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data)
+3. Run the following scripts listed in [Table 3](#table3) in the [`workflow`](/workflow/) directory to re-create this experiment
+
+<a name="table3"></a>
+**Table 3:** Scripts to reproduce my experiments.
+
+| Script Name | Description | Outputs | 
+| --- | --- | --- |
+| `LP_inputs_climate_future.R` | Script to generate climate inputs to the GLRY model | `LP_climate_GCM_rcp.csv` |
+| `LP_inputs_monthly_profiles_future.R` | Script to generate historical inputs 1) monthly profiles for inflow, evaporation, and demand; and 2) average annual demand by sector at basin level | `LP_fraction_profile_GCM_rcp.csv` <br> `LP_demand_sector_mean_annual_hist.csv` |
+| `LP_inputs_reservoir.R` | Script to generate the information of reservoir storage capacity and expansion potential at basin level | `LP_reservoir.csv` |
+| `LP_inputs_mean_slope_basin.R` | Script to generate mean slope of basin | `LP_mean_slope_basin.csv` |
+| `LP_gcamwrapper.py` | Script to run the GLORY model | GCAM outputs |
+
+4. Download and unzip the output data from my experiment [Output data](#output-data)
+5. Run the following scripts in the [`workflow`](/workflow/)  directory to compare my outputs to those from the publication
+
+
+
+[Back to Contents](#contents)
+
+## Reproduce my figures
+Use the scripts found in the [`figures`](/figures/)  directory to reproduce the figures used in this publication.
+
+<a name="table4"></a>
+**Table 4:** Scripts to reproduce my figures.
+
+| Script Name | Figure |
+| --- | --- |
+| `plot_reservoir.R` | Figure 1 |
+| `plot_supply_curve.R` | Figure 3 |
+| `plot_historical_supply_demand.R` | Figure 4 |
+| `plot_exploitable_zones.R` | Figure 5 |
+| `plot_unit_cost.R` | Figure 6 |
+| `plot_capacity_yield.R` | Figure 7 |
+| `plot_supply_curve.R` | Figure 8 |
+| `plot_supply_curve.R` | Figure 9 |
+| `.R` | Figure 10 |
+| `plot_correlation.R` | Figure 11 |
+
+
+[Back to Top](#representing-reservoir-water-storage-in-the-global-change-analysis-model-gcam)
