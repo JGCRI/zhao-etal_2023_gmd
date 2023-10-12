@@ -37,11 +37,9 @@ prj_ref <- rgcam::loadProject(
 )
 
 #  Experiment
-exp <- data.frame(run = c('20220807_21h29m', # A: climate impact reference MIROC-ESM-CHEM rcp6.0
-                          '20230226_11h16m', # A + B: feedback on
-                          '20230226_13h14m'), # A + C: feedback off
-                  scenario = c('Climate',
-                               'Climate_FB_ON',
+exp <- data.frame(run = c('climate_feedback_on', # A + B: feedback on
+                          'climate_feedback_off'), # A + C: feedback off
+                  scenario = c('Climate_FB_ON',
                                'Climate_FB_OFF'))  
 
 select_scenario <- 'Climate_FB_ON'

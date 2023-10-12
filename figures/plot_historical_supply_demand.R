@@ -351,14 +351,7 @@ for (id in select_basins){
                   title = title) +
     ggplot2::scale_x_continuous(breaks = seq(1, 12, 1)) +
     theme
-    # uncomment when using the mannual output for the figure (672 x 400)
-    # ggplot2::theme(
-    #   title = ggplot2::element_text(size = 20),
-    #   axis.text = ggplot2::element_text(colour = 'black', size = 18),
-    #   axis.title = ggplot2::element_text(size = 18),
-    #   strip.text = ggplot2::element_text(size = 18),
-    #   legend.position = 'none'
-    # )
+
   
   ggplot2::ggsave(file.path(save_path, paste0(file_name, '.png')),
                   height = 4.5, width = 7, unit = 'in', dpi = 300)

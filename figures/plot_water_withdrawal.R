@@ -50,9 +50,9 @@ paramsSelect_i <- c(paramsSelect_water)
 # Process GCAM output
 # ------------------------------------------------------------------------------
 dataGCAM <- tibble::tibble()
-if(file.exists(file.path(output_path, exp_name, rdata_name))){
+if(file.exists(file.path(output.dir, 'gcam_proc', rdata_name))){
   
-  dataGCAM <- readRDS(file.path(output_path, exp_name, rdata_name))
+  dataGCAM <- readRDS(file.path(output.dir, 'gcam_proc', rdata_name))
   
 } else {
   

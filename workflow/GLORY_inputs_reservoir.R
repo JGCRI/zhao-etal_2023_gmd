@@ -3,7 +3,7 @@
 # Maximum Reservoir Storage Capacity Potential                                 
 # Author: Mengqi Zhao                                            
 # Email: mengqi.zhao@pnnl.gov                                     
-# Last Update: 2021-02-25                                        
+# Last Update: 2022-08                                      
 ################################################################################
 
 # ------------------------------------------------------------------------------
@@ -235,9 +235,7 @@ wdpa_df <- as.data.frame(wdpa_raster_0p5resample, xy = TRUE, na.rm = TRUE) %>%
 # Import landuse change from Demeter
 demeter_output <- file.path(data.dir, 'landuse_demeter')
 # GCAM v5.3
-select_folders <- c('gcam5p3-stash_GFDL-ESM2M_rcp2p6_Reference_2021-05-10_16h55m37s')
-select_output <- paste(demeter_output, select_folders, sep = '/')
-output_files <- list.files(select_output, pattern = '0p5deg_2010', recursive = TRUE, full.names = TRUE)
+output_files <- list.files(demeter_output, pattern = '0p5deg_2010', recursive = TRUE, full.names = TRUE)
 
 
 # Function to read before run

@@ -32,8 +32,8 @@ output.dir <- file.path(work.dir, 'outputs_glory')
 output.workflow.dir <- file.path(dirname(work.dir), 'workflow', 'outputs')
 
 #  Experiment
-exp <- data.frame(run = c('20230226_11h16m', # A + B: feedback on
-                          '20230226_13h14m'), # A + C: feedback off
+exp <- data.frame(run = c('climate_feedback_on', # A + B: feedback on
+                          'climate_feedback_off'), # A + C: feedback off
                   scenario = c('Climate_FB_ON',
                                'Climate_FB_OFF'))  
 

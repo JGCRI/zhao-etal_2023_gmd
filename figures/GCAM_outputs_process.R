@@ -14,7 +14,7 @@ library(rgcam)
 # ------------------------------------------------------------------------------
 # Set working directory and data path
 # ------------------------------------------------------------------------------
-work.dir <- 'zhao-etal_2023_gmd/workflow' # update correspondingly
+work.dir <- 'zhao-etal_2023_gmd/figures' # update correspondingly
 output.dir <- file.path(work.dir, 'outputs_glory')
 db.dir <- file.path(output.dir, 'gcam_output_database')
 

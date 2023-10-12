@@ -3,7 +3,7 @@
 # Monthly Profiles for Demand, Evaporation, and Inflow using projected xanthos    
 # Contact: Mengqi Zhao                                            
 # Email: mengqi.zhao@pnnl.gov
-# Last Update: 2022-08-10
+# Last Update: 2022-08
 ################################################################################
 
 # Load packages
@@ -20,6 +20,7 @@ setwd(work.dir)
 data.dir <- file.path(work.dir, 'data')
 output.dir <- file.path(work.dir, 'outputs')
 xanthos.dir <- file.path(data.dir, 'hydrology_xanthos')
+tethys.dir <- file.path(data.dir, 'demand_tethys')
 
 gcm <- 'MIROC-ESM-CHEM'
 rcp <- 'rcp6p0'
@@ -225,10 +226,10 @@ pet_profile <- pet_basin %>%
 # gcm/rcp we are using
 wd_file_name <- 'wd_tethys_2005_2010_gcam5p3-stash_GFDL-ESM2M_rcp2p6_235basins.RDS'
 
-if(file.exists(wd_file_name)){
+if(file.exists(file.path(tehtys.dir, wd_file_name))){
   
   # saveRDS(wd_tethys, file = wd_file_name)
-  wd_tethys_235basins <- readRDS(file = wd_file_name)
+  wd_tethys_235basins <- readRDS(file = file.path(tehtys.dir, wd_file_name))
   
   # Calculate sectoral demand profiles
   demand_sector_profile <- wd_tethys_235basins %>% 

@@ -29,8 +29,8 @@ if(!dir.exists(figure.dir)){
 output.dir <- file.path(work.dir, 'outputs_glory')
 
 #  Experiment
-exp <- data.frame(run = c('20230120_11h28m', # A + B: feedback on
-                          '20230120_13h06m'), # A + C: feedback off)
+exp <- data.frame(run = c('climate_feedback_on', # A + B: feedback on
+                          'climate_feedback_off'), # A + C: feedback off
                   scenario = c('Climate_FB_ON',
                                'Climate_FB_OFF'))  
 select_scenario <- 'Climate_FB_ON'

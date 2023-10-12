@@ -63,14 +63,15 @@ Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/s
 
 | Input | Model or Source | Link or DOI | Description |
 |---|---|---|---|
-| Hydrological Inputs | Xanthos | [Xanthos Outputs](https://doi.org/10.5281/zenodo.4422095) | Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution |
-| Historical Water Demand | Tethys (based on GCAM Reference) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4321776.svg)](https://doi.org/10.5281/zenodo.4321776) | Monthly global water withdrawals for six demand sectors (electricity, irrigation, livestock, mining, industry, and municipal) at 0.5 degree resolution |
+| GLORY Data | **[GCIMS]** Various Sources | [DOI needed] | Reference data and selected Xanthos, Tethys, and Demeter outputs (e.g., single climate scenario) for the study. This base dataset provides the essential files needed to reproduce the experiment. |
+| Hydrological Inputs | **[GCIMS]** Xanthos | [DOI needed]| Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution. `GLORY Data` includes Xanthos output for one selected scenario. |
+| Water Demand | **[GCIMS]** Tethys | [DOI needed] | Monthly global water withdrawals for six demand sectors (electricity, irrigation, livestock, mining, industry, and municipal) at 0.5 degree resolution. `GLORY Data` includes Tethys output for one selected scenario.|
+| Irrigated Croplands | **[GCIMS]** Demeter | [DOI needed] | Global land use land cover change data at 0.5 degree resolution. `GLORY Data` includes Demeter output for one selected scenario. |
 | Reservoirs | GranD v1.3 | [GranD Link](https://www.globaldamwatch.org/grand) | Global Reservoir and Dam dataset |
 | Lakes | HydroLAKES v1.0 | [HydroLAKES Link](https://www.hydrosheds.org/products/hydrolakes) | Shoreline polygons of all global lakes with a surface area of at least 10 ha |
 | Population | SEDAC | [SEDAC Population Link](https://sedac.ciesin.columbia.edu/data/set/popdynamics-1-8th-pop-base-year-projection-ssp-2000-2100-rev01) | Global one-eighth degree population based on SSP2 |
 | World Database on Protected Areas (WDPA) | Protected Planet | [WDPA Link](https://www.protectedplanet.net) | Global protected terrestrial and marine areas |
 | Water Bodies | WWF GLWD-3 | [GLWD Link](https://www.worldwildlife.org/pages/global-lakes-and-wetlands-database) | Lakes, reservoirs, rivers and different wetland types in the form of a global raster map at 30-second resolution |
-| Irrigated Cropland | Demeter (based on GCAM Reference) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4420156.svg)](https://doi.org/10.5281/zenodo.4420156) | Global land use land cover change data at 0.5 degree resolution |
 | Slope | EarthEnv | [EarthEnv Link](https://www.earthenv.org/topography) | Global mean slopes at 50km resolution based on DEM products from global GMTED2010 |
 
 
@@ -107,11 +108,32 @@ Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/
 ## Reproduce My Experiment
 
 1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software).
-2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data).
-3. Run the following scripts listed in [Table 3](#table3) in the [`workflow`](/workflow/) directory to re-create this experiment. More details of inputs and outputs for each script are described in the [workflow](/workflow/).
+2. Clone the GitHub repository to your local device. The repository mainly consists of scripts for reproducing the experiment.
+```
+git clone https://github.com/JGCRI/zhao-etal_2023_gmd.git
+```
+3. Download the supporting input data required to conduct the experiment from [Input data](#input-data). Put the downloaded data within cloned `workflow` and `figures` folders following the folder structure shown in the figure below.
 
 <a name="table3"></a>
-**Table 3:** Scripts to reproduce my experiments.
+**Table 3:** folder structure.
+
+| Folder Name | Description | 
+| --- | --- |
+| `workflow/data` | This folder includes *raw* input data (e.g., hydrology, socioeconomic, and reference data) that is used to produce standard inputs to the GLORY model. We provide data originated from the project (labeled with `GCIMS`) and ask users to download copy-right data from other sources listed in [Input data](#input-data). |
+| `workflow/inputs_glory` | This folder includes the standard inputs produced using the `GLORY_inputs_xxx.R` scrips. User can choose to produce those files through the R scripts, or directly download these files. |
+| `figures/outputs_glory` | This folder includes outputs from the GLORY model. These outputs are used to produce figures using the scripts under [`figures`](/figures/) directory. |
+
+
+<a name="figure1"></a>
+
+<p align="center"> <img src="extras/folder_structure.jpg", width = '500'></p>
+
+<br>
+
+4. Run the following scripts listed in [Table 4](#table4) in the [`workflow`](/workflow/) directory to re-create this experiment. More details of inputs and outputs for each script are described in the [`workflow`](/workflow/).
+
+<a name="table4"></a>
+**Table 4:** Scripts to reproduce my experiments.
 
 | Script Name | Description | 
 | --- | --- |
@@ -121,8 +143,8 @@ Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/
 | `GLORY_inputs_mean_slope_basin.R` | Script to generate mean slope of basin |
 | `GLORY_gcamwrapper.py` | Script to run the GLORY model |
 
-4. Download and unzip the output data from my experiment [Output data](#output-data).
-5. compare my outputs to those from the publication.
+5. Download and unzip the output data from my experiment [Output data](#output-data).
+6. compare my outputs to those from the publication.
 
 
 

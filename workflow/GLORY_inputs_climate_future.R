@@ -4,7 +4,7 @@
 # For future climate
 # Author: Mengqi Zhao
 # Email: mengqi.zhao@pnnl.gov
-# Last Update: 2022-08-11
+# Last Update: 2022-08
 ################################################################################
 
 library(data.table)
