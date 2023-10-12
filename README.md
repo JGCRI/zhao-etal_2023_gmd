@@ -63,10 +63,10 @@ Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/s
 
 | Input | Model or Source | Link or DOI | Description |
 |---|---|---|---|
-| GLORY Data | **[GCIMS]** Various Sources | [DOI needed] | Reference data and selected Xanthos, Tethys, and Demeter outputs (e.g., single climate scenario) for the study. This base dataset provides the essential files needed to reproduce the experiment. |
-| Hydrological Inputs | **[GCIMS]** Xanthos | [DOI needed]| Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution. `GLORY Data` includes Xanthos output for one selected scenario. |
-| Water Demand | **[GCIMS]** Tethys | [DOI needed] | Monthly global water withdrawals for six demand sectors (electricity, irrigation, livestock, mining, industry, and municipal) at 0.5 degree resolution. `GLORY Data` includes Tethys output for one selected scenario.|
-| Irrigated Croplands | **[GCIMS]** Demeter | [DOI needed] | Global land use land cover change data at 0.5 degree resolution. `GLORY Data` includes Demeter output for one selected scenario. |
+| GLORY Data | **[GCIMS]** Various Sources | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8436685.svg)](https://doi.org/10.5281/zenodo.8436685) | Reference data and selected Xanthos, Tethys, and Demeter outputs (e.g., single climate scenario) for the study. This base dataset provides the essential files needed to reproduce the experiment. |
+| Hydrological Inputs | **[GCIMS]** Xanthos | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8436685.svg)](https://doi.org/10.5281/zenodo.8436685) | Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution. `GLORY Data` includes Xanthos output for one selected scenario. |
+| Water Demand | **[GCIMS]** Tethys | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8436685.svg)](https://doi.org/10.5281/zenodo.8436685) | Monthly global water withdrawals for six demand sectors (electricity, irrigation, livestock, mining, industry, and municipal) at 0.5 degree resolution. `GLORY Data` includes Tethys output for one selected scenario.|
+| Irrigated Croplands | **[GCIMS]** Demeter | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8436685.svg)](https://doi.org/10.5281/zenodo.8436685) | Global land use land cover change data at 0.5 degree resolution. `GLORY Data` includes Demeter output for one selected scenario. |
 | Reservoirs | GranD v1.3 | [GranD Link](https://www.globaldamwatch.org/grand) | Global Reservoir and Dam dataset |
 | Lakes | HydroLAKES v1.0 | [HydroLAKES Link](https://www.hydrosheds.org/products/hydrolakes) | Shoreline polygons of all global lakes with a surface area of at least 10 ha |
 | Population | SEDAC | [SEDAC Population Link](https://sedac.ciesin.columbia.edu/data/set/popdynamics-1-8th-pop-base-year-projection-ssp-2000-2100-rev01) | Global one-eighth degree population based on SSP2 |
@@ -84,7 +84,7 @@ Reference for each minted data source for your output data.  For example:
 Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/some-doi-number
 -->
 
-> Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. Output Dataset. Zenodo, In Progress.
+> Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. GLORY - Input and Output Data (v1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8436685
 
 [Back to Contents](#contents)
 
@@ -153,8 +153,8 @@ git clone https://github.com/JGCRI/zhao-etal_2023_gmd.git
 ## Reproduce My Figures
 Use the scripts found in the [`figures`](/figures/)  directory to reproduce the figures used in this publication.
 
-<a name="table4"></a>
-**Table 4:** Scripts to reproduce my figures.
+<a name="table5"></a>
+**Table 5:** Scripts to reproduce my figures.
 
 | Script Name | Figure |
 | --- | --- |
