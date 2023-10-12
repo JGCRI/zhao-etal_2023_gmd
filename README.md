@@ -1,7 +1,5 @@
 _your zenodo badge here_
 
-Zhao-etal_2023_GMD
-
 # Representing Reservoir Water Storage in the Global Change Analysis Model (GCAM)
 
 Mengqi Zhao<sup>1\*</sup>, Thomas B. Wild<sup>2</sup>, Neal T. Graham<sup>2</sup>, Son Kim<sup>2</sup>, Matthew Binsted<sup>2</sup>, AFK Kamal Chowdhury<sup>3</sup>, Siwa Msangi<sup>4</sup>, Pralit Patel<sup>2</sup>, Chris R. Vernon<sup>1</sup>, Hassam Niazi<sup>2</sup>, Hong-Yi Li<sup>5</sup>, Guta Abeshu<sup>5</sup>
@@ -30,13 +28,13 @@ Water resources shape, and are shaped by, broader interactions with climate, lan
 
 [Back to Contents](#contents)
 
-## Journal reference
+## Journal Reference
 
 > Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. Representing reservoir water storage in the Global Change Analysis Model (GCAM). _Geoscientific Modeling Development_, In Progress.
 
 [Back to Contents](#contents)
 
-## Code reference
+## Code Reference
 
 <!--
 References for each minted software release for all code involved.  
@@ -50,9 +48,9 @@ If you have modified a codebase that is outside of a formal release, and the mod
 
 [Back to Contents](#contents)
 
-## Data reference
+## Data Reference
 
-### Input data
+### Input Data
 
 <!--
 Reference for each minted data source for your input data.  For example:
@@ -65,19 +63,19 @@ Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/s
 
 | Input | Model or Source | Link or DOI | Description |
 |---|---|---|---|
-| Hydrological Inputs | Xanthos | [Xanthos Github](https://github.com/JGCRI/xanthos) | Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution |
+| Hydrological Inputs | Xanthos | [Xanthos Outputs](https://doi.org/10.5281/zenodo.4422095) | Monthly global runoff, streamflow, and evaporation at 0.5 degree resolution |
 | Historical Water Demand | Tethys (based on GCAM Reference) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4321776.svg)](https://doi.org/10.5281/zenodo.4321776) | Monthly global water withdrawals for six demand sectors (electricity, irrigation, livestock, mining, industry, and municipal) at 0.5 degree resolution |
 | Reservoirs | GranD v1.3 | [GranD Link](https://www.globaldamwatch.org/grand) | Global Reservoir and Dam dataset |
 | Lakes | HydroLAKES v1.0 | [HydroLAKES Link](https://www.hydrosheds.org/products/hydrolakes) | Shoreline polygons of all global lakes with a surface area of at least 10 ha |
 | Population | SEDAC | [SEDAC Population Link](https://sedac.ciesin.columbia.edu/data/set/popdynamics-1-8th-pop-base-year-projection-ssp-2000-2100-rev01) | Global one-eighth degree population based on SSP2 |
 | World Database on Protected Areas (WDPA) | Protected Planet | [WDPA Link](https://www.protectedplanet.net) | Global protected terrestrial and marine areas |
 | Water Bodies | WWF GLWD-3 | [GLWD Link](https://www.worldwildlife.org/pages/global-lakes-and-wetlands-database) | Lakes, reservoirs, rivers and different wetland types in the form of a global raster map at 30-second resolution |
-| Irrigated Crop Land | Demeter (based on GCAM Reference) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4420156.svg)](https://doi.org/10.5281/zenodo.4420156) | Global land use land cover change data at 0.5 degree resolution |
+| Irrigated Cropland | Demeter (based on GCAM Reference) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4420156.svg)](https://doi.org/10.5281/zenodo.4420156) | Global land use land cover change data at 0.5 degree resolution |
 | Slope | EarthEnv | [EarthEnv Link](https://www.earthenv.org/topography) | Global mean slopes at 50km resolution based on DEM products from global GMTED2010 |
 
 
 
-### Output data
+### Output Data
 
 <!--
 Reference for each minted data source for your output data.  For example:
@@ -90,7 +88,7 @@ Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/
 [Back to Contents](#contents)
 
 
-## Contributing modeling software
+## Contributing Modeling Software
 
 <a name="table2"></a>
 **Table 2:** Contributing modeling software.
@@ -106,31 +104,31 @@ Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/
 
 [Back to Contents](#contents)
 
-## Reproduce my experiment
+## Reproduce My Experiment
 
-1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software)
-2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data)
-3. Run the following scripts listed in [Table 3](#table3) in the [`workflow`](/workflow/) directory to re-create this experiment
+1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software).
+2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data).
+3. Run the following scripts listed in [Table 3](#table3) in the [`workflow`](/workflow/) directory to re-create this experiment. More details of inputs and outputs for each script are described in the [workflow](/workflow/).
 
 <a name="table3"></a>
 **Table 3:** Scripts to reproduce my experiments.
 
-| Script Name | Description | Outputs | 
-| --- | --- | --- |
-| `LP_inputs_climate_future.R` | Script to generate climate inputs to the GLRY model | `LP_climate_GCM_rcp.csv` |
-| `LP_inputs_monthly_profiles_future.R` | Script to generate historical inputs 1) monthly profiles for inflow, evaporation, and demand; and 2) average annual demand by sector at basin level | `LP_fraction_profile_GCM_rcp.csv` <br> `LP_demand_sector_mean_annual_hist.csv` |
-| `LP_inputs_reservoir.R` | Script to generate the information of reservoir storage capacity and expansion potential at basin level | `LP_reservoir.csv` |
-| `LP_inputs_mean_slope_basin.R` | Script to generate mean slope of basin | `LP_mean_slope_basin.csv` |
-| `LP_gcamwrapper.py` | Script to run the GLORY model | GCAM outputs |
+| Script Name | Description | 
+| --- | --- |
+| `GLORY_inputs_climate_future.R` | Script to generate climate inputs to the GLRY model |
+| `GLORY_inputs_monthly_profiles_future.R` | Script to generate historical inputs 1) monthly profiles for inflow, evaporation, and demand; and 2) average annual demand by sector at basin level |
+| `GLORY_inputs_reservoir.R` | Script to generate the information of reservoir storage capacity and expansion potential at basin level |
+| `GLORY_inputs_mean_slope_basin.R` | Script to generate mean slope of basin |
+| `GLORY_gcamwrapper.py` | Script to run the GLORY model |
 
-4. Download and unzip the output data from my experiment [Output data](#output-data)
-5. Run the following scripts in the [`workflow`](/workflow/)  directory to compare my outputs to those from the publication
+4. Download and unzip the output data from my experiment [Output data](#output-data).
+5. compare my outputs to those from the publication.
 
 
 
 [Back to Contents](#contents)
 
-## Reproduce my figures
+## Reproduce My Figures
 Use the scripts found in the [`figures`](/figures/)  directory to reproduce the figures used in this publication.
 
 <a name="table4"></a>
@@ -146,7 +144,7 @@ Use the scripts found in the [`figures`](/figures/)  directory to reproduce the 
 | `plot_capacity_yield.R` | Figure 7 |
 | `plot_supply_curve.R` | Figure 8 |
 | `plot_supply_curve.R` | Figure 9 |
-| `.R` | Figure 10 |
+| `plot_water_withdrawal.R` | Figure 10 |
 | `plot_correlation.R` | Figure 11 |
 
 
