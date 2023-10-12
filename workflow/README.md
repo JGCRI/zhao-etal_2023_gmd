@@ -6,7 +6,7 @@ Each script processes input data and produces required files for running the GLO
 ```
 git clone https://github.com/JGCRI/zhao-etal_2023_gmd.git
 ```
-2. Download the input data from [input data (DOI needed)](<Zenodo DOI>), and put those data under cloned GitHub repository `zhao-etal_2023_gmd/workflow/data`. These input data does not include public available data from other studies (see step 3).
+2. Download the input data from [input data](https://doi.org/10.5281/zenodo.8436685), and put those data under cloned GitHub repository `zhao-etal_2023_gmd/workflow/data`. These input data does not include public available data from other studies (see step 3).
 3. Download the publicly available data listed in [Table 1](../README.md#table1) into the `zhao-etal_2023_gmd/workflow/data` folder from Step 2. Please unzip the downloaded data if zipped.[Table 1](#table1) shows the data required for each script.
 
 
