@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10211057.svg)](https://doi.org/10.5281/zenodo.10211057)
 
-# Representing Reservoir Water Storage in the Global Change Analysis Model (GCAM)
+# GCAM-GLORY v1.0: Representing Global Reservoir Water Storage in a Multisector Human-Earth System Model
 
 Mengqi Zhao<sup>1\*</sup>, Thomas B. Wild<sup>2</sup>, Neal T. Graham<sup>2</sup>, Son Kim<sup>2</sup>, Matthew Binsted<sup>2</sup>, AFK Kamal Chowdhury<sup>3</sup>, Siwa Msangi<sup>4</sup>, Pralit Patel<sup>2</sup>, Chris R. Vernon<sup>1</sup>, Hassam Niazi<sup>2</sup>, Hong-Yi Li<sup>5</sup>, Guta Abeshu<sup>5</sup>
 
@@ -30,7 +30,7 @@ Water resources shape, and are shaped by, broader interactions with climate, lan
 
 ## Journal Reference
 
-> Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. Representing reservoir water storage in the Global Change Analysis Model (GCAM). _Geoscientific Modeling Development_, In Progress.
+> Zhao, M., Wild, T.B., Graham, N.T., Kim, S., Binsted, M., Chowdhury, K., Msangi, S., Patel, P., Vernon, C.R., Niazi, H., Li, H., Abeshu, G. 2023. GCAM-GLORY v1.0: Representing Global Reservoir Water Storage in a Multisector Human-Earth System Model. _Geoscientific Modeling Development_, In Progress.
 
 [Back to Contents](#contents)
 
